@@ -1,11 +1,11 @@
 {
-  "name": "ChangeInserterDropLane",
-  "version": "1.1.1",
-  "title": "Change Inserter Drop Lane",
-  "description": "Change which side of the belt an inserter will drop on.",
-  "author": "raiguard, Krastor, Linver",
-  "contact": "https://github.com/raiguard/ChangeInserterDropLane",
-  "homepage": "https://github.com/raiguard/ChangeInserterDropLane",
+  "name": "ChangeInserterDropLaneWithResearch",
+  "version": "1.2.0",
+  "title": "Change Inserter Drop Lane with Research",
+  "description": "Change which side of the belt an inserter will drop on, but now it's unlocked with research.",
+  "author": "raiguard, Krastor, Linver, Nyhilo",
+  "contact": "https://github.com/Nyhilo/ChangeInserterDropLane",
+  "homepage": "https://github.com/Nyhilo/ChangeInserterDropLane",
   "factorio_version": "2.0",
   "dependencies": [ "base >= 2.0.0", "flib >= 0.15.0" ],
   "package": {
