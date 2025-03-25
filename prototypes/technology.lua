@@ -2,14 +2,14 @@ data:extend({
     {
         type = "technology",
         name = "changeInserterDropLane",
-        icon = "__ChangeInserterDropLane__/graphics/change-lane-icon.png",
+        icon = "__ChangeInserterDropLaneWithResearch__/graphics/change-lane-icon.png",
         icon_size = 128,
         effects = {},
         prerequisites = {
-            "logistics-2"
+            "logistics-3"
         },
         unit = {
-            count = 2000,
+            count = 500,
             ingredients = {
                 { "automation-science-pack", 1 },
                 { "logistic-science-pack", 1 },
