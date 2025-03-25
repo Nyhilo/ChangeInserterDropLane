@@ -230,12 +230,30 @@ end
 flib_gui.add_handlers({ on_droplane_switch_state_changed = on_droplane_switch_state_changed })
 flib_gui.handle_events()
 
+local cidl_technology = "changeInserterDropLane"
+
 script.on_init(on_init)
 script.on_configuration_changed(on_init)
-script.on_event("cidl-change-lane", on_change_lane)
-script.on_event(defines.events.on_gui_opened, on_gui_opened)
-script.on_event(defines.events.on_pre_entity_settings_pasted, on_pre_entity_settings_pasted)
-script.on_event(defines.events.on_entity_settings_pasted, on_entity_settings_pasted)
+script.on_event("cidl-change-lane", function(event)
+  if game.getPlayer(event.player_index).force.technologies[cidl_technology].researched then
+    on_change_lane(event)
+  end
+end)
+script.on_event(defines.events.on_gui_opened, function(event)
+  if game.getPlayer(event.player_index).force.technologies[cidl_technology].researched then
+    on_gui_opened(event)
+  end
+end)
+script.on_event(defines.events.on_pre_entity_settings_pasted, function(event)
+  if game.getPlayer(event.player_index).force.technologies[cidl_technology].researched then
+    on_pre_entity_settings_pasted(event)
+  end
+end)
+script.on_event(defines.events.on_entity_settings_pasted, function(event)
+  if game.getPlayer(event.player_index).force.technologies[cidl_technology].researched then
+    on_entity_settings_pasted(event)
+  end
+end)
 
 -- For simulations
 remote.add_interface("ChangeInserterDropLane_simulation", {
