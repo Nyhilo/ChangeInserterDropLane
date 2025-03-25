@@ -84,3 +84,5 @@ data:extend({
     },
   },
 })
+
+require("prototypes.technology")
